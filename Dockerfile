@@ -1,5 +1,7 @@
 FROM weaveworksdemos/msd-java:latest
 
+mvn -DskipTests package
+
 WORKDIR /usr/src/app
 COPY *.jar ./app.jar
 
