@@ -1,7 +1,5 @@
 FROM weaveworksdemos/msd-java:latest
 
-GROUP=spankil COMMIT=test ./scripts/build.sh
-
 WORKDIR /usr/src/app
 COPY *.jar ./app.jar
 
