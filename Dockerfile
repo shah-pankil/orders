@@ -1,6 +1,6 @@
 FROM weaveworksdemos/msd-java:latest
 
-CMD ["java","-jar","demo.jar"]
+CMD ["mvn","-DskipTests","Package"]
 
 RUN ls -ltr
 
