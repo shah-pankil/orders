@@ -1,5 +1,7 @@
 FROM weaveworksdemos/msd-java:latest
 
+CMD ["java","-jar","demo.jar"]
+
 WORKDIR /usr/src/app
 COPY *.jar ./app.jar
 
