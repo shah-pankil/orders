@@ -1,13 +1,12 @@
 FROM weaveworksdemos/msd-java:latest
 
-CMD ["ls","-ltr"]
+RUN ls -ltr
 
-WORKDIR /usr/src/app
-COPY *.jar ./app.jar
+COPY . /orderssrc
+WORKDIR /orderssrc
 
-RUN	chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar
+RUN ls -ltr
 
-USER ${SERVICE_USER}
+RUN ["mvn", "package"]
 
-ENV JAVA_OPTS "-Djava.security.egd=file:/dev/urandom"
-ENTRYPOINT ["/usr/local/bin/java.sh","-jar","./app.jar", "--port=80"]
+RUN find . -name *.jar
