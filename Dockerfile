@@ -1,6 +1,6 @@
 FROM weaveworksdemos/msd-java:latest
 
-CMD ["mvn","-DskipTests","Package"]
+CMD ["ls","-ltr"]
 
 WORKDIR /usr/src/app
 COPY *.jar ./app.jar
