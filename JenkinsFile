@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("shah-pankil/orders")
+        app = sudo docker.build("shah-pankil/orders")
     }
 
     stage('Test image') {
