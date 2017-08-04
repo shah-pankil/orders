@@ -7,6 +7,6 @@ WORKDIR /orderssrc
 
 RUN ls -ltr
 
-RUN ["/opt/maven/mvn", "package"]
+RUN ["/opt/maven/bin/mvn", "package"]
 
 RUN find . -name *.jar
